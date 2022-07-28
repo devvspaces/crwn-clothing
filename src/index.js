@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {App, Demo, Expenses, Invoices} from './App';
+import {App} from './App';
 // import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 // import reportWebVitals from './reportWebVitals';
 
@@ -11,14 +11,7 @@ root.render(
   <React.StrictMode>
     
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="expenses" element={<Expenses />} />
-          <Route path="invoices" element={<Invoices />}>
-            <Route path="demo" element={<Demo />} />
-          </Route>
-        </Route>
-      </Routes>
+      <App />
     </BrowserRouter>
     
   </React.StrictMode>
